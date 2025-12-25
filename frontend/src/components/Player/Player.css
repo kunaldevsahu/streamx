@@ -1,0 +1,8 @@
+.player-bar {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 10px;
+  background: #111;
+  color: white;
+}
