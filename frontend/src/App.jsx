@@ -1,14 +1,25 @@
 import { useEffect, useState } from "react";
 import { PlayerProvider } from "./context/PlayerContext";
-import SongList from "./components/SongList";
-import AudioPlayer from "./components/Player/AudioPlayer";
-import Controls from "./components/Player/Controls";
-import ProgressBar from "./components/Player/ProgressBar";
-import NowPlaying from "./components/Player/NowPlaying";
 import { getTrending } from "./services/musicApi";
-import "./components/Player/Player.css";
-import RoomPanel from "./components/RoomPanel";
-import RoomChat from "./components/RoomChat";
+import AppLayout from "./layout/AppLayout";
+import AudioPlayer from "./components/Player/AudioPlayer";
+import "./styles/reset.css";
+import "./styles/variables.css";
+import "./styles/layout.css";
+import "./styles/topbar.css";
+import "./styles/sidebar.css";
+import "./styles/mainpanel.css";
+import "./styles/participants.css";
+import "./styles/chat.css";
+import "./styles/roompanel.css";
+import "./styles/bottomplayer.css";
+import "./styles/nowplaying.css";
+import "./styles/controls.css";
+import "./styles/progress.css";
+import "./styles/emojis.css";
+import "./styles/hierarchy.css";
+import "./styles/demo.css"
+
 
 
 
@@ -21,19 +32,7 @@ function App() {
 
   return (
     <PlayerProvider>
-      <h1>🎧 StreamX</h1>
-      <RoomPanel />
-      <RoomChat />
-
-
-      <SongList songs={songs} />
-
-      <div className="player-bar">
-        <NowPlaying />
-        <Controls />
-        <ProgressBar />
-      </div>
-
+      <AppLayout songs={songs} />
       <AudioPlayer />
     </PlayerProvider>
   );

@@ -1,0 +1,87 @@
+/* ===== MAIN CONTENT ===== */
+.main-content {
+  padding: 40px;
+  background: radial-gradient(
+    circle at top left,
+    rgba(139, 92, 246, 0.10),
+    transparent 45%
+  );
+}
+
+/* ===== SECTION TITLE ===== */
+.section-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+/* ===== GRID ===== */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+/* ===== CARD ===== */
+.music-card {
+  background: #181826;
+  border-radius: 18px;
+  padding: 18px;
+
+  border: 1px solid rgba(255,255,255,0.06);
+
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.music-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 30px 80px rgba(0,0,0,0.8);
+}
+
+
+/* ===== ART ===== */
+.card-art {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+
+  background: linear-gradient(
+    135deg,
+    #2a2a38,
+    #1a1a22
+  );
+
+  border-radius: 12px;
+  margin-bottom: 14px;
+}
+
+
+/* ===== INFO ===== */
+.card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.card-title {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.card-subtitle {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.section-title {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 28px;
+  letter-spacing: 0.4px;
+}
+
+.app-layout {
+  grid-template-columns:
+    72px
+    2.2fr
+    1fr;
+}

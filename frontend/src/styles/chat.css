@@ -1,0 +1,78 @@
+/* ===== CHAT ===== */
+.chat {
+  flex: 1;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  overflow-y: auto;
+}
+
+
+/* Message */
+.chat-message {
+  max-width: 78%;
+  padding: 10px 14px;
+  border-radius: 16px;
+
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.chat-message.other {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.chat-message.self {
+  align-self: flex-end;
+  background: linear-gradient(
+    135deg,
+    var(--primary),
+    var(--secondary)
+  );
+  color: #000;
+}
+
+
+/* Username */
+.chat-username {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-soft);
+  margin-bottom: 4px;
+}
+
+
+/* ===== INPUT ===== */
+.chat-input {
+  padding: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+
+  display: flex;
+  gap: 10px;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 10px 14px;
+
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 999px;
+
+  font-size: 13px;
+}
+
+.chat-input button {
+  padding: 0 16px;
+  border-radius: 999px;
+
+  background: linear-gradient(
+    135deg,
+    var(--primary),
+    var(--secondary)
+  );
+
+  color: #000;
+  font-weight: 600;
+}

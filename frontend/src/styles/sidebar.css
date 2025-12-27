@@ -1,0 +1,61 @@
+/* ===== SIDEBAR ===== */
+.sidebar {
+  grid-row: 2;
+  background: var(--bg-panel);
+  border-right: 1px solid var(--border-soft);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 12px 0;
+}
+
+/* ===== SECTIONS ===== */
+.sidebar-top,
+.sidebar-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* ===== BUTTON ===== */
+.sidebar-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+
+  display: grid;
+  place-items: center;
+
+  font-size: 18px;
+  background: transparent;
+  color: var(--text-muted);
+
+  transition: var(--transition-fast);
+}
+
+/* Hover */
+.sidebar-btn:hover {
+  background: var(--bg-hover);
+  color: var(--text-main);
+}
+
+/* Active */
+.sidebar-btn.active {
+  background: rgba(139, 92, 246, 0.15);
+  color: var(--primary);
+}
+
+/* Optional indicator bar */
+.sidebar-btn.active::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 3px;
+  height: 20px;
+  background: var(--primary);
+  border-radius: 2px;
+}
+

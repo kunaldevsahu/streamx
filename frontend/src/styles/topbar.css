@@ -1,0 +1,117 @@
+/* ===== TOP BAR ===== */
+.topbar {
+  height: var(--topbar-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 20px;
+  background: rgba(11, 11, 15, 0.75);
+  backdrop-filter: blur(14px);
+
+  border-bottom: 1px solid var(--border-soft);
+}
+
+/* ===== LEFT SECTION ===== */
+.topbar-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 0.4px;
+}
+
+/* ===== SEARCH ===== */
+.search-box {
+  width: 360px;
+  background: var(--bg-card);
+  border-radius: 999px;
+  padding: 8px 14px;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  border: 1px solid transparent;
+  transition: var(--transition-fast);
+}
+
+.search-box input {
+  flex: 1;
+  font-size: 14px;
+  color: var(--text-main);
+}
+
+.search-box input::placeholder {
+  color: var(--text-muted);
+}
+
+.search-box:hover {
+  background: var(--bg-hover);
+}
+
+.search-box:focus-within {
+  border-color: var(--primary);
+  background: var(--bg-hover);
+}
+
+/* ===== RIGHT SECTION ===== */
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* ===== SESSION BUTTON ===== */
+.session-btn {
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+
+  background: linear-gradient(
+    135deg,
+    var(--primary),
+    var(--secondary)
+  );
+  color: #000;
+
+  transition: var(--transition-normal);
+}
+
+.session-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(139, 92, 246, 0.35);
+}
+
+/* ===== ICON BUTTONS ===== */
+.icon-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+
+  background: var(--bg-card);
+  display: grid;
+  place-items: center;
+
+  transition: var(--transition-fast);
+}
+
+.icon-btn:hover {
+  background: var(--bg-hover);
+}
+
+/* ===== AVATAR ===== */
+.icon-btn.avatar {
+  background: linear-gradient(
+    135deg,
+    var(--primary),
+    var(--secondary)
+  );
+  color: #000;
+  font-weight: 700;
+}

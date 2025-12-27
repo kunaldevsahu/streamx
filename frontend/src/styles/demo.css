@@ -1,0 +1,48 @@
+/* Demo-friendly background */
+body {
+  background: radial-gradient(
+    circle at top,
+    #0f0f16,
+    #000 60%
+  );
+}
+
+.card-art {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-art::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    transparent,
+    rgba(0,0,0,0.35)
+  );
+}
+
+.music-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.music-card:hover {
+  transform: translateY(-6px) scale(1.01);
+}
+
+.bottom-player {
+  background: linear-gradient(
+    180deg,
+    rgba(20,20,27,0.95),
+    rgba(10,10,14,0.98)
+  );
+}
+
+.bottom-player::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  box-shadow: 0 -10px 40px rgba(139,92,246,0.12);
+  pointer-events: none;
+}

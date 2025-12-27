@@ -1,0 +1,45 @@
+.progress-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 12px;
+}
+
+.progress-slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+  /* Pink Gradient for Melodies Theme */
+  background-image: var(--accent-gradient);
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+/* Thumb Styling */
+.progress-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  background: #fff;
+  cursor: pointer;
+  box-shadow: 0 0 8px var(--accent);
+  opacity: 0;
+  /* Hidden by default */
+  transition: opacity 0.1s;
+}
+
+.progress-container:hover .progress-slider::-webkit-slider-thumb {
+  opacity: 1;
+}
+
+.progress-slider:disabled {
+  cursor: default;
+}
+
+.progress-slider:disabled::-webkit-slider-thumb {
+  display: none;
+}

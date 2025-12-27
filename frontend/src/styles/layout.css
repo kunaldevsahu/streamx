@@ -1,0 +1,96 @@
+/* ===== APP LAYOUT ===== */
+.app-layout {
+  display: grid;
+  grid-template-rows:
+    var(--topbar-height)
+    1fr
+    var(--bottom-player-height);
+
+  /* 🔥 Main content gets more space */
+  grid-template-columns:
+    var(--sidebar-width)
+    minmax(0, 1.7fr)
+    minmax(320px, 1fr);
+
+  height: 100vh;
+  background: var(--bg-app);
+}
+
+
+
+/* ===== TOP BAR ===== */
+.topbar {
+  grid-column: 1 / -1;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.8),
+    transparent
+  );
+  z-index: 10;
+}
+
+/* ===== LEFT SIDEBAR ===== */
+.sidebar {
+  grid-row: 2;
+  background:  #07070b;
+  border-right: 1px solid var(--border-soft);
+  
+}
+
+/* ===== MAIN CONTENT ===== */
+.main-content {
+  grid-row: 2;
+  overflow-y: auto;
+  padding: 24px;
+  background: #0f0f17;
+}
+
+/* ===== RIGHT PANEL (COLLAB) ===== */
+.right-panel {
+  grid-row: 2;
+  background: #0b0b12;
+  border-left: 1px solid var(--border-soft);
+  display: flex;
+  flex-direction: column;
+  
+}
+
+/* ===== BOTTOM PLAYER ===== */
+.bottom-player {
+  grid-column: 1 / -1;
+  background: var(--bg-panel);
+  border-top: 1px solid var(--border-soft);
+  z-index: 20;
+}
+
+
+.music-card {
+  background: linear-gradient(
+    180deg,
+    #1b1b24,
+    #121218
+  );
+  border-radius: 16px;
+}
+
+.card-art {
+  background: linear-gradient(
+    135deg,
+    #2a2a38,
+    #1a1a22
+  );
+}
+
+.right-panel {
+  background: linear-gradient(
+    180deg,
+    rgba(139,92,246,0.08),
+    transparent 40%
+  );
+}
+
+.section-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 24px;
+}

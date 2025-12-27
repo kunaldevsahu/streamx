@@ -1,0 +1,37 @@
+:root {
+  /* ===== COLORS ===== */
+  --bg-app: #0b0b0f;
+  --bg-panel: #14141b;
+  --bg-hover: #1e1e28;
+  --bg-card: #16161f;
+
+  --primary: #8b5cf6;     /* StreamX purple */
+  --secondary: #22d3ee;   /* cyan accent */
+
+  --text-main: #ffffff;
+  --text-muted: #a1a1aa;
+  --text-soft: #71717a;
+
+  --border-soft: #262626;
+
+  --danger: #ef4444;
+  --success: #22c55e;
+
+  /* ===== SIZING ===== */
+  --topbar-height: 64px;
+  --bottom-player-height: 96px;
+  --sidebar-width: 72px;
+  --right-panel-width: 360px;
+
+  /* ===== RADIUS ===== */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+
+  /* ===== SHADOW ===== */
+  --shadow-soft: 0 4px 24px rgba(0, 0, 0, 0.4);
+
+  /* ===== TRANSITION ===== */
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.25s ease;
+}

@@ -1,0 +1,31 @@
+.now-playing {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.now-playing-art {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-sm);
+  background: linear-gradient(
+    135deg,
+    #27272a,
+    #18181b
+  );
+}
+
+.now-playing-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.now-playing-title {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.now-playing-artist {
+  font-size: 12px;
+  color: var(--text-muted);
+}

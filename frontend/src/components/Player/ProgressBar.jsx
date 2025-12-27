@@ -1,9 +1,9 @@
 import { usePlayer } from "../../context/PlayerContext";
 
 function formatTime(time = 0) {
-  const m = Math.floor(time / 60);
-  const s = Math.floor(time % 60);
-  return `${m}:${s < 10 ? "0" : ""}${s}`;
+  const minutes = Math.floor(time / 60);
+  const seconds = Math.floor(time % 60);
+  return `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
 }
 
 export default function ProgressBar() {
@@ -17,20 +17,48 @@ export default function ProgressBar() {
   if (!duration) return null;
 
   return (
-    <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-      <span>{formatTime(currentTime)}</span>
+    <div style={{ width: "100%", padding: "8px 0" }}>
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          gap: 8,
+        }}
+      >
+        <span style={{ fontSize: 12 }}>
+          {formatTime(currentTime)}
+        </span>
 
-      <input
-        type="range"
-        min="0"
-        max={duration}
-        value={currentTime}
-        onChange={(e) => seekTo(Number(e.target.value))}
-        disabled={!isHost}   // 🔒 listeners can’t drag
-        style={{ flex: 1 }}
-      />
+        <input
+          type="range"
+          min="0"
+          max={duration}
+          step="0.5"
+          value={currentTime}
+          onChange={(e) => seekTo(Number(e.target.value))}
+          disabled={!isHost}
+          style={{
+            flex: 1,
+            cursor: isHost ? "pointer" : "not-allowed",
+          }}
+        />
 
-      <span>{formatTime(duration)}</span>
+        <span style={{ fontSize: 12 }}>
+          {formatTime(duration)}
+        </span>
+      </div>
+
+      {!isHost && (
+        <p
+          style={{
+            fontSize: 11,
+            opacity: 0.6,
+            marginTop: 4,
+          }}
+        >
+          Only host can control playback
+        </p>
+      )}
     </div>
   );
 }
